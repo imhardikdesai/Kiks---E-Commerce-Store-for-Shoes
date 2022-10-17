@@ -71,12 +71,17 @@ nav ul {
     /* margin: 0px 178px; */
 }
 
+.hero-text h1 {
+    font-size: 3.4rem;
+    font-weight: 1000;
+}
+
 .hero-btn {
     background-color: #FF3C78;
     color: white;
+    border: 1px solid transparent;
     padding: 10px 47px;
     border-radius: 4px;
-    border-color: transparent;
     font-size: 12px;
 }
 
@@ -87,5 +92,13 @@ nav ul {
 }
 
 .hero-image img {
-    height: 720px;
+    height: 500px;
+}
+
+/* utilities classes */
+.badge {
+    --bs-badge-padding-x: 0.25em !important;
+    --bs-badge-padding-y: 0.05em !important;
+    --bs-badge-font-size: 0.55em !important;
+    padding: 1px 6px !important;
 }
