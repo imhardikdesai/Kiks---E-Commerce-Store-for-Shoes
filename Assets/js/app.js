@@ -1,5 +1,5 @@
 let topProducts = document.getElementById("topProducts");
-
+function showTopShoes() {
 fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/js/json/topProducts.json')
 	.then(response => response.json())
 	.then(data => {
@@ -27,3 +27,5 @@ fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/
 		topProducts.innerHTML = str;
 	})
 	.catch(err => console.error(err));
+}
+showTopShoes()
