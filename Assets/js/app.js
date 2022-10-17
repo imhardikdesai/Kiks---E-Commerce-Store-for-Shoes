@@ -4,6 +4,7 @@ fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/
 	.then(response => response.json())
 	.then(data => {
 		let shoes = data.shoes;
+		console.log(shoes);
 		let str = "";
 		for (key in shoes) {
 			str += `
