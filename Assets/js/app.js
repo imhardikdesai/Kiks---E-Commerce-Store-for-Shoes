@@ -9,6 +9,7 @@ function showTopShoes(shoesNumbers) {
 			for (let i = 0; i < shoesNumbers; i++) {
 				str += `
 			<div class="p-body">
+			<div class="circle" style="${shoes[i].bgGradient}"></div>
                 <img class="shoesImg" src="${shoes[i].imgSrc}" alt="shoes">
                 <div class="rating">
                     <i class="fa fa-star clicked"></i>

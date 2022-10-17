@@ -3,22 +3,26 @@
         {
             "name": "Adidas Falcon Shoes for men - 2021 Edition",
             "price": "$120.50",
-            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216283-f6bc53e1-8436-4792-8c95-1ea38ae37b23.png"
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216283-f6bc53e1-8436-4792-8c95-1ea38ae37b23.png",
+            "bgGradient": "background: linear-gradient(239deg, #FE7831 0%, #FFDEBE 100%);"
         },
         {
             "name": "Nike Falcon Shoes for men - 2019 Edition",
             "price": "$160.99",
-            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216268-9a2aecc3-50d0-470d-a039-6977c31742a9.png"
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216268-9a2aecc3-50d0-470d-a039-6977c31742a9.png",
+            "bgGradient": "background: linear-gradient(239deg, #02BE83 0%, #B3F6DC 100%);"
         },
         {
             "name": "Puma Falcon Shoes for men - 2022 Edition",
             "price": "$230.50",
-            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216291-11594ed3-8d88-4627-bd18-19eebdfb5777.png"
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216291-11594ed3-8d88-4627-bd18-19eebdfb5777.png",
+            "bgGradient": "background: linear-gradient(239deg, #FF3C78 0%, #FFB2B2 100%);"
         },
         {
             "name": "Reebok Falcon Shoes for men - 2020 Edition",
             "price": "$420.99",
-            "imgSrc": "https://user-images.githubusercontent.com/87645745/196236479-88c2ad35-deba-4e67-8a54-798fbe02e334.png"
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196236479-88c2ad35-deba-4e67-8a54-798fbe02e334.png",
+            "bgGradient": "background: linear-gradient(239deg, #8AA8F8 0%, #315BFF 100%);"
         },
         {
             "name": "Yellow Tape Mens Rte277a Sneaker",

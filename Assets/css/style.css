@@ -136,9 +136,19 @@ nav ul {
 }
 
 .shoesImg {
-    height: 43% !important;
+    height: 34% !important;
     max-width: 100%;
     margin-bottom: 40px;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: -1;
+    position: relative;
+    top: 106px;
+    left: 68px;
 }
 
 /* utilities classes */
