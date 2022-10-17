@@ -4,17 +4,14 @@
     font-family: 'Work Sans', sans-serif;
 }
 
-/* body {
-    background-color: #E5E5E5;
-} */
-
 /* Navbar Styling */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 12px;
+    margin: 0px 12px;
+    padding-top: 12px;
 }
 
 nav ul {
@@ -95,10 +92,45 @@ nav ul {
     height: 500px;
 }
 
+/* Featured Products */
+.f-products {
+    padding: 75px 0px;
+}
+
+#viewAll {
+    color: #FF3C78;
+}
+
+.p-body {
+    border: 2px solid black;
+}
+
+.rating {
+    font-size: 14px;
+    margin-bottom: 0.54rem;
+}
+
+.clicked {
+    color: #FE7831;
+}
+.top-p-name{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.top-p-price{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
 /* utilities classes */
 .badge {
     --bs-badge-padding-x: 0.25em !important;
     --bs-badge-padding-y: 0.05em !important;
     --bs-badge-font-size: 0.55em !important;
     padding: 1px 6px !important;
+}
+
+#section-1 {
+    background-color: #E5E5E5;
+    padding-bottom: 75px;
 }

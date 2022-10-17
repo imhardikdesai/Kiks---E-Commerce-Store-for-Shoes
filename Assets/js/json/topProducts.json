@@ -1,0 +1,24 @@
+{
+    "shoes": [
+        {
+            "name": "Adidas Falcon Shoes for men - 2021 Edition",
+            "price": "$120.50",
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216283-f6bc53e1-8436-4792-8c95-1ea38ae37b23.png"
+        },
+        {
+            "name": "Nike Falcon Shoes for men - 2019 Edition",
+            "price": "$160.99",
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216268-9a2aecc3-50d0-470d-a039-6977c31742a9.png"
+        },
+        {
+            "name": "Puma Falcon Shoes for men - 2022 Edition",
+            "price": "$230.50",
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216291-11594ed3-8d88-4627-bd18-19eebdfb5777.png"
+        },
+        {
+            "name": "Reebok Falcon Shoes for men - 2020 Edition",
+            "price": "$420.99",
+            "imgSrc": "https://user-images.githubusercontent.com/87645745/196216251-8e0dde05-eb09-4939-8fd8-c332ff17da6e.png"
+        }
+    ]
+}
