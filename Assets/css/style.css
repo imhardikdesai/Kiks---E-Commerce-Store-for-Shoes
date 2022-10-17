@@ -99,10 +99,12 @@ nav ul {
 
 #viewAll {
     color: #FF3C78;
+    font-weight: 400;
 }
 
-.p-body {
-    margin: 12px 20px;
+#viewAll:hover {
+    cursor: pointer;
+    color: #ff3c76a3;
 }
 
 .rating {
@@ -114,6 +116,11 @@ nav ul {
     color: #FE7831;
 }
 
+.p-body {
+    margin: 12px 20px;
+    width: 21%;
+}
+
 .top-p-name {
     font-size: 1rem;
     font-weight: 200;
@@ -123,12 +130,15 @@ nav ul {
     font-size: 2rem;
     font-weight: 900;
 }
-.top-p-text{
+
+.top-p-text {
     width: 200px;
 }
+
 .shoesImg {
-    height: 50%;
-    width: auto;
+    height: 43% !important;
+    max-width: 100%;
+    margin-bottom: 40px;
 }
 
 /* utilities classes */
