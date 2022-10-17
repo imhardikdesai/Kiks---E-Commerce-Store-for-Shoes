@@ -162,4 +162,5 @@ nav ul {
 #section-1 {
     background-color: #E5E5E5;
     padding-bottom: 75px;
+    overflow: hidden;
 }
