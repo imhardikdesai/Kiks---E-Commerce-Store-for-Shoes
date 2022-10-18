@@ -20,7 +20,7 @@ function showTopShoes(shoesNumbers) {
                 </div>
 				<div class="top-p-text">
                 <p class="top-p-name">${shoes[i].name}</p>
-                <p class="top-p-price">${shoes[i].price}</p>
+                <p class="top-p-price">${shoes[i].price} <span class="material-symbols-outlined addIcon">add</span></p>
 				</div>
             </div>
 			`;
