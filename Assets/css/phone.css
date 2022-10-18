@@ -60,11 +60,11 @@
         display: none !important;
     }
 
-    #f-product-head {
+    .f-product-head {
         justify-content: center !important;
     }
 
-    #f-product-head h1 {
+    .f-product-head h1 {
         font-size: 1.6rem;
     }
 
