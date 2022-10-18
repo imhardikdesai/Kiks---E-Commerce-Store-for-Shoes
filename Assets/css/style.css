@@ -18,6 +18,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+    margin-bottom: 0px;
 }
 
 .nav-links a li:hover {

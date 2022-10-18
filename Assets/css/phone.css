@@ -1,16 +1,16 @@
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1192px) {
     .p-body {
         width: 29%;
     }
 }
 
-@media only screen and (max-width: 881px) {
+@media only screen and (max-width: 1003px) {
     .p-body {
         width: 44%;
     }
 }
 
-@media only screen and (max-width: 813px) {
+@media only screen and (max-width: 801px) {
     .hero-box {
         flex-direction: column;
         text-align: center;
@@ -22,10 +22,51 @@
     }
 
     .p-body {
-        width: 56%;
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
     #topProducts {
-       align-items: center;
-       justify-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .top-p-text {
+        text-align: center;
+    }
+    .circle{
+        left: 9px;
+    }
+    .top-p-name{
+        font-size: 1.5rem;
+    }
+    .top-p-price{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 586px) {
+    .hero-image img{
+        height: 290px;
+    }
+    #viewAll{
+        display: none !important;
+    }
+    #f-product-head{
+        justify-content: center !important;
+    }
+    #f-product-head h1{
+        font-size: 1.6rem;
+    }
+    .f-products{
+        padding: 40px 0px;
+    }
+    .shoesImg{
+        max-width: 150%;
+    }
+    .hero-text h1{
+        font-size: 2.5rem;
     }
 }
