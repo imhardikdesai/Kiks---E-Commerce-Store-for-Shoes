@@ -2,24 +2,35 @@
     .p-body {
         width: 29%;
     }
+
 }
 
 @media only screen and (max-width: 1003px) {
     .p-body {
         width: 44%;
     }
+
+    .list li {
+        padding: 4px;
+    }
+
 }
 
 @media only screen and (max-width: 801px) {
+
+    /* navbar  */
+    .nav-links {
+        display: none;
+    }
+
+    /* hero box  */
     .hero-box {
         flex-direction: column;
         text-align: center;
         margin-top: 40px;
     }
 
-    .nav-links {
-        display: none;
-    }
+    /* featured products  */
 
     .p-body {
         width: 66%;
@@ -48,7 +59,50 @@
 
     .top-p-price {
         font-size: 2rem;
+        justify-content: center;
     }
+
+    /* best seller  */
+    .b-product-head {
+        flex-direction: column;
+    }
+
+    .b-product-head h1 {
+        margin-bottom: 23px;
+    }
+
+    .bestSeller {
+        flex-direction: column;
+    }
+
+    .best-p-detail {
+        margin-top: 90px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .shoes-display {
+        position: relative;
+        left: -220px;
+        width: 380px;
+    }
+
+    #seller-shoes {
+        left: 85px;
+        height: 310px;
+    }
+}
+
+
+
+@media only screen and (max-width: 677px) {
+
+    #seller-shoes {
+        height: 272px;
+        left: 130px;
+    }
+
+
 }
 
 @media only screen and (max-width: 586px) {
