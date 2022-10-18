@@ -39,3 +39,6 @@ function addProduct(id) {
 	cartCount.innerHTML = count;
 	console.log(id);
 }
+
+// women shoes 
+// https://user-images.githubusercontent.com/87645745/196430139-c49f6ea2-caab-4626-bae1-78fd52b09f9c.png
