@@ -32,13 +32,15 @@
             "id": 5,
             "name": "Yellow Tape Mens Rte277a Sneaker",
             "price": "$253.45",
-            "imgSrc": "https://m.media-amazon.com/images/I/718uBGGQldL._UX695_.jpg"
+            "imgSrc": "https://m.media-amazon.com/images/I/718uBGGQldL._UX695_.jpg",
+            "bgGradient": "background: linear-gradient(239deg, #27EC37 0%, #CCEFBA 100%);"
         },
         {
             "id": 6,
             "name": "Nike Unisex-Child Air Jordan 1 White",
             "price": "$442.46",
-            "imgSrc": "https://m.media-amazon.com/images/I/71hVZ+XE0SS._UX695_.jpg"
+            "imgSrc": "https://m.media-amazon.com/images/I/71hVZ+XE0SS._UX695_.jpg",
+            "bgGradient": "background: linear-gradient(239deg, #E9EA55 0%, #F7F7C1 100%);"
         }
     ]
 }
