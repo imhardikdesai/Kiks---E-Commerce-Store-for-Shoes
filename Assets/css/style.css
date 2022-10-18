@@ -138,7 +138,7 @@ nav ul {
 }
 
 .top-p-price {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 900;
     display: flex;
     align-items: center;
@@ -146,10 +146,12 @@ nav ul {
 }
 
 .addIcon {
-    font-size: 30px !important;
+    font-size: 20px !important;
     color: #315BFF;
     border: 2px solid #315BFF;
-    border-radius: 50%;
+    border-radius: 17%;
+    margin: 0px 6px;
+    padding: 7px;
 }
 .addIcon:hover {
     color: #315affa7;
@@ -176,7 +178,6 @@ nav ul {
     top: 106px;
     left: 68px;
 }
-
 /* utilities classes */
 .badge {
     --bs-badge-padding-x: 0.25em !important;

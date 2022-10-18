@@ -7,6 +7,7 @@ function showTopShoes(shoesNumbers) {
 			console.log(shoes);
 			let str = "";
 			for (let i = 0; i < shoesNumbers; i++) {
+				console.log(shoes[i].id);
 				str += `
 			<div class="p-body">
 			<div class="circle" style="${shoes[i].bgGradient}"></div>
@@ -19,8 +20,8 @@ function showTopShoes(shoesNumbers) {
                     <i class="fa fa-star"></i>
                 </div>
 				<div class="top-p-text">
-                <p class="top-p-name">${shoes[i].name}</p>
-                <p class="top-p-price">${shoes[i].price} <span class="material-symbols-outlined addIcon">add</span></p>
+                	<p class="top-p-name">${shoes[i].name}</p>
+					<p class="top-p-price">${shoes[i].price}<span id="${shoes[i].id}" onClick="addProduct(this.id)" class="material-symbols-outlined addIcon">add_shopping_cart</span></p>
 				</div>
             </div>
 			`;
@@ -30,3 +31,8 @@ function showTopShoes(shoesNumbers) {
 		.catch(err => console.error(err));
 }
 showTopShoes('4');
+
+
+function addProduct(id){
+	console.log(id);
+}

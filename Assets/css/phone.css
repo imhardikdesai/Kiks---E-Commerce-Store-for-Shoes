@@ -33,40 +33,50 @@
         align-items: center;
         justify-content: center;
     }
+
     .top-p-text {
         text-align: center;
     }
-    .circle{
+
+    .circle {
         left: 9px;
     }
-    .top-p-name{
+
+    .top-p-name {
         font-size: 1.5rem;
     }
-    .top-p-price{
+
+    .top-p-price {
         font-size: 2rem;
     }
 }
 
 @media only screen and (max-width: 586px) {
-    .hero-image img{
+    .hero-image img {
         height: 290px;
     }
-    #viewAll{
+
+    #viewAll {
         display: none !important;
     }
-    #f-product-head{
+
+    #f-product-head {
         justify-content: center !important;
     }
-    #f-product-head h1{
+
+    #f-product-head h1 {
         font-size: 1.6rem;
     }
-    .f-products{
+
+    .f-products {
         padding: 40px 0px;
     }
-    .shoesImg{
+
+    .shoesImg {
         max-width: 150%;
     }
-    .hero-text h1{
+
+    .hero-text h1 {
         font-size: 2.5rem;
     }
 }
