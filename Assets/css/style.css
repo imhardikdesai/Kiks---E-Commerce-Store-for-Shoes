@@ -244,36 +244,55 @@ input:checked+.slider:before {
 }
 
 /* switch code ends  */
-.b-product-head{
+.b-product-head {
     margin: 0px 30px;
 }
+
 .b-product-head h1 {
     font-size: 2.6rem;
 }
+
 .shoes-display {
     background: linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%);
     display: inline-block;
     border-radius: 0px 10px 10px 0px;
+    width: 408px;
+}
+/* .shoes-display {
+    background: linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%);
+    display: inline-block;
+    border-radius: 0px 10px 10px 0px;
     width: 310px;
+} */
+
+.best-p-detail {
+    margin-right: 147px;
 }
-.best-p-detail{
-    margin-right: 30px;
-}
+
 #seller-shoes {
-    height: 300px;
+    height: 400px;
     position: relative;
     top: 21px;
     left: 32px;
 }
 
-#shopNow{
+/* #seller-shoes {
+    height: 300px;
+    position: relative;
+    top: 21px;
+    left: 32px;
+} */
+
+#shopNow {
     background-color: #315BFF;
 }
-#shopNow:hover{
+
+#shopNow:hover {
     background-color: white;
     color: #315BFF;
     border: 1px solid #315BFF;
 }
+
 /* utilities classes */
 .badge {
     --bs-badge-padding-x: 0.25em !important;
