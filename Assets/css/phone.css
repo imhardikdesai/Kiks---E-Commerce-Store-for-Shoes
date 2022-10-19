@@ -22,7 +22,7 @@
         text-align: center;
     }
 
-    #seller-shoes {
+    #sellerShoes {
         height: 346px;
         left: 300px;
     }
@@ -96,7 +96,7 @@
         margin-bottom: 23px;
     }
 
-    #seller-shoes {
+    #sellerShoes {
         left: 313px;
         height: 310px;
     }
@@ -109,12 +109,12 @@
 
 @media only screen and (max-width: 677px) {
 
-    /* #seller-shoes {
+    /* #sellerShoes {
         height: 272px;
         left: 130px;
     }
 
-    #seller-shoes {
+    #sellerShoes {
         left: 227px;
         height: 263px;
     } */
@@ -123,7 +123,7 @@
         width: 623px;
     }
 
-    #seller-shoes {
+    #sellerShoes {
         left: 465px;
         height: 180px;
     }

@@ -40,5 +40,14 @@ function addProduct(id) {
 	console.log(id);
 }
 
-// women shoes
-// https://user-images.githubusercontent.com/87645745/196430139-c49f6ea2-caab-4626-bae1-78fd52b09f9c.png
+function displayNewShoes() {
+	let toggleGender = document.getElementById("toggleGender");
+	let sellerShoes = document.getElementById("sellerShoes");
+	if (toggleGender.checked == true) {
+		sellerShoes.setAttribute('src', './Assets/img/best-seller-women.png');
+		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%) ';
+	} else {
+		sellerShoes.setAttribute('src', './Assets/img/best-seller-men.png');
+		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #2226d4 0%, #98cef9 100%) ';
+	}
+}
