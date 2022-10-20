@@ -258,6 +258,7 @@ input:checked+.slider:before {
     border-radius: 0px 10px 10px 0px;
     width: 408px;
 }
+
 /* .shoes-display {
     background: linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%);
     display: inline-block;
@@ -292,6 +293,48 @@ input:checked+.slider:before {
     color: #315BFF;
     border: 1px solid #315BFF;
 }
+
+
+/* FOOTER CODE HERE  */
+footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+
+.footerSocialIcons {
+    padding-left: 12px;
+    margin-top: 30px;
+}
+
+#box1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLogo img {
+    height: 100px;
+}
+.icons{
+    padding: 0px 15px;
+}
+.icons svg {
+    color: #FF3C78;
+}
+
+.footerTextBox ul {
+    list-style: none;
+}
+.footerTextBox ul li:hover{
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.footerTextBox {
+    padding: 0px 38px;
+}
+
 
 /* utilities classes */
 .badge {
