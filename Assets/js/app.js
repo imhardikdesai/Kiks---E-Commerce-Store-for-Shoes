@@ -9,7 +9,7 @@ function showTopShoes() {
 			for (let i = 0; i < 4; i++) {
 				str += `
 			<div class="p-body">
-			<div class="circle" style="${shoes[i].bgGradient}"></div>
+			<div class="circle" style="background: linear-gradient(239deg, ${shoes[i].bgGradient[0]} 0%, ${shoes[i].bgGradient[1]} 100%);"></div>
                 <img class="shoesImg" src="${shoes[i].imgSrc}" alt="shoes">
                 <div class="rating">
                     <i class="fa fa-star clicked"></i>
