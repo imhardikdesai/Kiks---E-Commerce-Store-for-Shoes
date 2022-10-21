@@ -155,8 +155,9 @@ nav ul {
 }
 
 .addIcon:hover {
-    color: #315affa7;
-    border-color: #315affa7;
+    background-color: #315BFF;
+    color: white;
+    border-color: #315BFF;
     cursor: pointer;
 }
 
@@ -294,6 +295,18 @@ input:checked+.slider:before {
     border: 1px solid #315BFF;
 }
 
+/* CHOOSE CATEGORIES */
+.cat {
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+
+.cat img {
+    height: 200px;
+}
+
+
 
 /* FOOTER CODE HERE  */
 footer {
@@ -316,17 +329,24 @@ footer {
 .footerLogo img {
     height: 100px;
 }
-.icons{
+
+.icons {
     padding: 0px 15px;
 }
+
 .icons svg {
     color: #FF3C78;
+}
+
+.footer-text {
+    padding-left: 26px;
 }
 
 .footerTextBox ul {
     list-style: none;
 }
-.footerTextBox ul li:hover{
+
+.footerTextBox ul li:hover {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.726);
 }
@@ -335,6 +355,35 @@ footer {
     padding: 0px 38px;
 }
 
+#hiddenFooterList {
+    display: none;
+}
+
+#footer-hidden-list ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0px !important;
+}
+
+#footer-hidden-list ul li {
+    font-weight: 900;
+    font-size: 1.6rem;
+    padding: 12px 0px;
+
+}
+
+#footer-hidden-list ul li:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.726);
+
+}
+
+#footer-hidden-list {
+    margin: 15px 0px;
+}
 
 /* utilities classes */
 .badge {
@@ -348,4 +397,29 @@ footer {
     background-color: #E5E5E5;
     padding-bottom: 75px;
     overflow: hidden;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #A4A4A3;
+    color: white;
+    cursor: pointer;
+    padding: 10px 13px;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+#myBtn span {
+    position: relative;
+    top: 3px;
+}
+
+#myBtn:hover {
+    background-color: #FF3C78;
 }

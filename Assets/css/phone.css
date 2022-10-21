@@ -1,9 +1,35 @@
+@media only screen and (max-width: 1235px) {
+    .footerTextBox ul b li {
+        font-size: 1rem !important;
+    }
+
+    .footerTextBox ul li {
+        font-size: 13px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+
+    .icons {
+        padding: 0px 2px;
+    }
+
+    .footerSocialIcons {
+        padding-left: 24px;
+    }
+
+}
+
+
+
 @media only screen and (max-width: 1192px) {
     .p-body {
         width: 29%;
     }
 
 }
+
 
 @media only screen and (max-width: 1095px) {
     .bestSeller {
@@ -102,6 +128,43 @@
     }
 
 
+
+}
+
+
+@media only screen and (max-width: 770px) {
+
+    #footer-Links,
+    .footerLogo {
+        display: none !important;
+    }
+
+    .footer-text {
+        font-size: 19px;
+        padding: 5px 33px;
+    }
+
+    #bottom-footer {
+        text-align: center;
+        padding: 0px 70px;
+    }
+
+    #footer {
+        display: block;
+        text-align: center;
+    }
+
+    .icons {
+        padding: 0px 22px;
+    }
+
+    #hiddenFooterList {
+        display: block;
+    }
+
+    #bottom-hr {
+        display: none;
+    }
 
 }
 

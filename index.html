@@ -25,6 +25,10 @@
 </head>
 
 <body>
+    <!-- up arrow button  -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            expand_less
+        </span></button>
     <!-- navbar -->
     <div id="section-1">
         <nav>
@@ -130,14 +134,67 @@
         </div>
     </section>
 
+    <!-- chose category   -->
+    <!-- <section class="container">
+        <div class="cat-head">
+            <h1 id="cat-header" class="text-center fw-bolder">
+                Choose categories
+            </h1>
+            <p id="cat-para" class="text-center w-50 m-auto">
+                For explosive events (sprints up to 400 metres, long jump, triple jump) the reduction in atmospheric
+                pressure means there is less resistance from the atmosphere.
+            </p>
+        </div>
+        <div class="cat-box d-flex justify-content-evenly align-items-center">
+            <div>
+
+                <div id="cat-1" class="cat">
+                    <h4 class="fw-bolder" style="color: #315BFF;">Sneakers Collection</h4>
+                    <p>120 Products</p>
+                    <a class="fw-bold" href="#" style="color: #315BFF;">See collection</a>
+                </div>
+                <img src="./Assets/img/Categories/Shoes.png" alt="categories">
+            </div>
+            <div id="cat-1" class="cat">
+                <h4 class="fw-bolder" style="color: #FE7831;">Football Collection</h4>
+                <p>80 Products</p>
+                <a class="fw-bold" href="#" style="color: #FE7831;">See collection</a>
+                <img src="./Assets/img/Categories/Ball.png" alt="categories">
+            </div>
+            <div id="cat-1" class="cat">
+                <h4 class="fw-bolder" style="color: #FF3C78;">Volleyball Collection</h4>
+                <p>160 Products</p>
+                <a class="fw-bold" href="#" style="color: #FF3C78;">See collection</a>
+                <img src="./Assets/img/Categories/Volly.png" alt="categories">
+            </div>
+        </div>
+    </section> -->
+
     <!-- footer start here  -->
     <footer id="footer" class="container">
         <div id="box1">
             <div class="footerLogo">
                 <img src="./Assets/img/logo.png" alt="footer-logo">
             </div>
-            <div style="padding-left: 26px;">
+            <div class="footer-text">
                 Our Shop is the best choice for buying footwear.
+            </div>
+            <div id="hiddenFooterList">
+                <hr>
+                <div id="footer-hidden-list">
+                    <ul>
+                        <a style="color: black; text-decoration: none;" href="#section-1">
+                            <li>Home</li>
+                        </a>
+                        <a style="color: black; text-decoration: none;" href="#topProducts">
+                            <li>Our Information</li>
+                        </a>
+                        <a style="color: black; text-decoration: none;" href="#section-1">
+                            <li>My Account</li>
+                        </a>
+                    </ul>
+                </div>
+                <hr>
             </div>
             <div class="footerSocialIcons">
                 <span class="icons">
@@ -163,45 +220,45 @@
                 </span>
             </div>
         </div>
-        <div class="d-flex">
+        <div id="footer-Links" class="d-flex">
             <div id="box2" class="footerTextBox">
                 <ul>
-                <b>
-                    <li class="fs-5">Home</li>
-                </b>
-                <li>Support Center</li>
-                <li>Customer Support</li>
-                <li>Copyright</li>
-                <li>Popular Campaign</li>
-            </ul>
+                    <b>
+                        <li class="fs-5">Home</li>
+                    </b>
+                    <li>Support Center</li>
+                    <li>Customer Support</li>
+                    <li>Copyright</li>
+                    <li>Popular Campaign</li>
+                </ul>
+            </div>
+            <div id="box3" class="footerTextBox">
+                <ul>
+                    <b>
+                        <li class="fs-5">Our Information</li>
+                    </b>
+                    <li>Return Policy</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms and Condition</li>
+                    <li>Site Map</li>
+                    <li>Store Hours</li>
+                </ul>
+            </div>
+            <div id="box4" class="footerTextBox">
+                <ul>
+                    <b>
+                        <li class="fs-5">My Account</li>
+                    </b>
+                    <li>Press Inquiries</li>
+                    <li>Social Media Directories</li>
+                    <li>Permission</li>
+                    <li>Requests</li>
+                </ul>
+            </div>
         </div>
-        <div id="box3" class="footerTextBox">
-            <ul>
-                <b>
-                    <li class="fs-5">Our Information</li>
-                </b>
-                <li>Return Policy</li>
-                <li>Privacy Policy</li>
-                <li>Terms and Condition</li>
-                <li>Site Map</li>
-                <li>Store Hours</li>
-            </ul>
-        </div>
-        <div id="box4" class="footerTextBox">
-            <ul>
-                <b>
-                    <li class="fs-5">My Account</li>
-                </b>
-                <li>Press Inquiries</li>
-                <li>Social Media Directories</li>
-                <li>Permission</li>
-                <li>Requests</li>
-            </ul>
-        </div>
-    </div>
     </footer>
-    <hr class="container">
-    <div class="container" style="margin: 3rem auto;">
+    <hr id="bottom-hr" class="container">
+    <div id="bottom-footer" class="container" style="margin: 3rem auto;">
         © 2022 Kiks Square Store - Create by Hardik Desai
     </div>
 
