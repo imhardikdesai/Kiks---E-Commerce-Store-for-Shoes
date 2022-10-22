@@ -1,4 +1,4 @@
-// scroll button 
+// CROLL BUTTON CODE
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -18,6 +18,7 @@ function topFunction() {
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// FETCH PRODUCTS IN JSON 
 
 let topProducts = document.getElementById("topProducts");
 function showTopShoes(startIndex, endIndex) {
@@ -41,7 +42,7 @@ function showTopShoes(startIndex, endIndex) {
                 </div>
 				<div class="top-p-text">
                 	<p class="top-p-name">${shoes[startIndex].name}</p>
-					<p class="top-p-price">${shoes[startIndex].price}<span id="${shoes[startIndex].id}" onClick="addProduct(this.id)" class="material-symbols-outlined addIcon">add_shopping_cart</span></p>
+					<p class="top-p-price">${shoes[startIndex].price}<span onClick="addProduct(${shoes[startIndex].id},'${shoes[startIndex].name}','${shoes[startIndex].price}','${shoes[startIndex].imgSrc}');" class="material-symbols-outlined addIcon">add_shopping_cart</span></p>
 				</div>
             </div>
 			`;
@@ -50,17 +51,30 @@ function showTopShoes(startIndex, endIndex) {
 		})
 		.catch(err => console.error(err));
 }
-showTopShoes(0, 12);
+showTopShoes(0, 4);
 
+// SHOW NUMBER OF PRODUCT IN CART LOGO 
 
-let cartCount = document.getElementById("cartCount");
-let count = 0;
-function addProduct(id) {
-	count++;
-	cartCount.innerHTML = count;
-	console.log(id);
-	setCartItems(count)
+// let cartCount = document.getElementById("cartCount");
+// let count = 0;	
+function addProduct(id, name, price, imgSrc) {
+	// count++;
+	// cartCount.innerHTML = count;
+	var cartProducts = [];
+	cartProducts.push(JSON.parse(localStorage.getItem('cartObject')));
+	localStorage.setItem('session', JSON.stringify(cartProducts))
+
+	// let cartObj = {
+	// 	'id': id,
+	// 	'name': name,
+	// 	'price': price,
+	// 	'imgSrc': imgSrc
+	// };
+	// localStorage.setItem('cartObject', JSON.stringify(cartObj));
+
 }
+
+// MALE AND FEMALE SHOES DISPLAY 
 
 function displayNewShoes() {
 	let toggleGender = document.getElementById("toggleGender");
@@ -76,8 +90,6 @@ function displayNewShoes() {
 	}
 }
 
-
-
-function setCartItems(cartNumbers) {
-	sessionStorage.setItem('cartNumbers', cartNumbers);
+function showCartPage() {
+	document.getElementById('hiddenCartPage').style.display = "none";
 }
