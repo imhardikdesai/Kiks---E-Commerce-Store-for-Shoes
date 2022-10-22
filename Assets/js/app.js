@@ -19,9 +19,6 @@ function topFunction() {
 }
 
 
-
-
-
 let topProducts = document.getElementById("topProducts");
 function showTopShoes(startIndex, endIndex) {
 	fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/js/json/topProducts.json')
@@ -30,7 +27,7 @@ function showTopShoes(startIndex, endIndex) {
 			let shoes = data.shoes;
 			console.log(shoes);
 			let str = "";
-			for (startIndex; startIndex <endIndex; startIndex++) {
+			for (startIndex; startIndex < endIndex; startIndex++) {
 				str += `
 			<div class="p-body">
 			<div class="circle" style="background: linear-gradient(239deg, ${shoes[startIndex].bgGradient[0]} 0%, ${shoes[startIndex].bgGradient[1]} 100%);"></div>
@@ -77,3 +74,6 @@ function displayNewShoes() {
 		document.getElementById('bestSellerShoesText').innerText = 'Adidas Falcon Shoes for men - 2021 Edition (BLUE)';
 	}
 }
+
+
+

@@ -34,36 +34,36 @@
     <div id="section-1">
         <nav>
             <div class="logo">
-                <a href="#"><img src="./Assets/img/logo.png" alt="logo"></a>
+                <a href="index.html"><img src="./Assets/img/logo.png" alt="logo"></a>
             </div>
             <ul class="nav-links">
-                <a class="list" href="#">
+                <a class="list" href="index.html">
                     <li>Footwear</li>
                     <!-- <span class="underLine"></span> -->
                 </a>
-                <a class="list" href="#">
+                <a class="list" href="index.html">
                     <li>About us</li>
                     <!-- <span class="underLine"></span> -->
                 </a>
-                <a class="list" href="#topProducts">
+                <a class="list" href="index.html">
                     <li>Products</li>
                     <!-- <span class="underLine"></span> -->
                 </a>
-                <a class="list" href="#">
+                <a class="list" href="index.html">
                     <li>Sale</li>
                     <!-- <span class="underLine"></span> -->
                 </a>
             </ul>
             <ul class="nav-icons">
-                <a class="list" href="#">
+                <a class="list" href="index.html">
                     <li><span class="material-symbols-outlined">search</span></li>
                     <!-- <span class="underLine"></span> -->
                 </a>
-                <a class="list" href="#">
+                <a class="list" href="index.html">
                     <li><span class="material-symbols-outlined">person</span></li>
                     <!-- <span class="underLine"></span> -->
                 </a>
-                <a class="list" target="_self" href="Cart.html">
+                <a class="list" href="#">
                     <li><span class="material-symbols-outlined">shopping_bag<span id="cartCount"
                                 class="badge rounded-pill badge-notification bg-danger"></span>
                         </span></li>
@@ -72,106 +72,6 @@
             </ul>
         </nav>
 
-        <!-- hero -->
-        <div class="hero-box container">
-            <div class="hero-text">
-                <h1>Get your <span class="hero-text-span">Awesome</span><br> Sneakers</h1>
-                <p>We offer the best deals in our shop. Check them out now. We have awesome stuff on sale for
-                    you.
-                </p>
-                <button class="hero-btn">Shop Now</button>
-            </div>
-            <div class="hero-image">
-                <img src="./Assets/img/hero-image.png" alt="hero">
-            </div>
-        </div>
-        <!-- featured products  -->
-
-        <section class="container f-products">
-            <div class="d-flex align-items-end justify-content-between mb-3 f-product-head">
-                <h1 class="fw-bolder">Featured Products</h1>
-                <p id="viewAll" class="d-flex flex-nowrap align-items-center">View all
-                    <span class="material-symbols-outlined">chevron_right</span>
-                </p>
-            </div>
-            <!-- feature & top Products are here  -->
-            <div id="topProducts" class="top-products d-flex flex-wrap justify-content-around"></div>
-        </section>
-        <hr class="container">
-        <!-- best seller in this week  -->
-        <section class="f-products">
-            <div class="d-flex align-items-center justify-content-between b-product-head">
-                <h1 class="fw-bolder">Best seller this week</h1>
-                <div>
-                    <span class="m-1 fw-bold">Men</span>
-                    <label class="switch">
-                        <input id="toggleGender" onchange="displayNewShoes()" type="checkbox" checked>
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="m-1 fw-bold">Women</span>
-                </div>
-            </div>
-            <!-- best seller in this week are here  -->
-            <div class="bestSeller mt-5 d-flex justify-content-between align-items-center">
-                <div class="shoes-display" id="shoesDisplay">
-                    <img id="sellerShoes" src="./Assets/img/best-seller-women.png" alt="men-shoes">
-                </div>
-                <div class="best-p-detail d-flex flex-column justify-content-center">
-                    <div class="rating">
-                        <i class="fa fa-star clicked"></i>
-                        <i class="fa fa-star clicked"></i>
-                        <i class="fa fa-star clicked"></i>
-                        <i class="fa fa-star clicked"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <div class="top-p-text">
-                        <p id="bestSellerShoesText" class="top-p-name fw-bolder">Adidas Falcon Shoes for women -
-                            2021
-                            Edition (PINK)</p>
-                        <p class="top-p-price">$120.50</p>
-                    </div>
-                    <button id="shopNow" class="hero-btn">Shop Now</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- chose category   -->
-        <section class="container cat-main-container">
-            <div class="cat-head">
-                <h1 id="cat-header" class="text-center fw-bolder">
-                    Choose categories
-                </h1>
-                <p id="cat-para" class="text-center w-50 m-auto">
-                    For explosive events (sprints up to 400 metres, long jump, triple jump) the reduction in
-                    atmospheric
-                    pressure means there is less resistance from the atmosphere.
-                </p>
-            </div>
-            <div class="cat-box d-flex justify-content-evenly align-items-center">
-
-                <div id="cat-1" class="cat">
-                    <h4 class="fw-bolder" style="color: #315BFF;">Sneakers <br> Collection</h4>
-                    <p>120 Products</p>
-                    <a class="fw-bold" href="#" style="color: #315BFF;">See collection</a>
-                    <img src="./Assets/img/Categories/Shoes.png" alt="categories">
-                    <div class="half-circle"></div>
-                </div>
-                <div id="cat-2" class="cat">
-                    <h4 class="fw-bolder" style="color: #FE7831;">Football <br> Collection</h4>
-                    <p>80 Products</p>
-                    <a class="fw-bold" href="#" style="color: #FE7831;">See collection</a>
-                    <img src="./Assets/img/Categories/Ball.png" alt="categories">
-                    <div class="half-circle"></div>
-                </div>
-                <div id="cat-3" class="cat">
-                    <h4 class="fw-bolder" style="color: #FF3C78;">Volleyball <br> Collection</h4>
-                    <p>160 Products</p>
-                    <a class="fw-bold" href="#" style="color: #FF3C78;">See collection</a>
-                    <img src="./Assets/img/Categories/Volly.png" alt="categories">
-                    <div class="half-circle"></div>
-                </div>
-            </div>
-        </section>
 
         <hr class="container">
         <!-- footer start here  -->
@@ -272,21 +172,5 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 <script src="./Assets/js/app.js"></script>
-<script>
-    // let slideIndex = 0;
-    // showSlides();
-
-    // function showSlides() {
-    //     let i;
-    //     let slides = document.getElementsByClassName("mySlides");
-    //     for (i = 0; i < slides.length; i++) {
-    //         slides[i].style.display = "none";
-    //     }
-    //     slideIndex++;
-    //     if (slideIndex > slides.length) { slideIndex = 1 }
-    //     slides[slideIndex - 1].style.display = "block";
-    //     setTimeout(showSlides, 5000); // Change image every 2 seconds
-    // }
-</script>
 
 </html>
