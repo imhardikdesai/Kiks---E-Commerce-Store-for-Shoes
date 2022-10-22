@@ -22,6 +22,7 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -97,7 +98,7 @@
         <!-- feature & top Products are here  -->
         <div id="topProducts" class="top-products d-flex flex-wrap justify-content-around"></div>
     </section>
-    <hr>
+    <hr class="container">
     <!-- best seller in this week  -->
     <section class="f-products">
         <div class="d-flex align-items-center justify-content-between b-product-head">
@@ -135,7 +136,7 @@
     </section>
 
     <!-- chose category   -->
-    <!-- <section class="container">
+    <section class="container cat-main-container">
         <div class="cat-head">
             <h1 id="cat-header" class="text-center fw-bolder">
                 Choose categories
@@ -146,30 +147,31 @@
             </p>
         </div>
         <div class="cat-box d-flex justify-content-evenly align-items-center">
-            <div>
 
-                <div id="cat-1" class="cat">
-                    <h4 class="fw-bolder" style="color: #315BFF;">Sneakers Collection</h4>
-                    <p>120 Products</p>
-                    <a class="fw-bold" href="#" style="color: #315BFF;">See collection</a>
-                </div>
-                <img src="./Assets/img/Categories/Shoes.png" alt="categories">
-            </div>
             <div id="cat-1" class="cat">
-                <h4 class="fw-bolder" style="color: #FE7831;">Football Collection</h4>
+                <h4 class="fw-bolder" style="color: #315BFF;">Sneakers <br> Collection</h4>
+                <p>120 Products</p>
+                <a class="fw-bold" href="#" style="color: #315BFF;">See collection</a>
+                <img src="./Assets/img/Categories/Shoes.png" alt="categories">
+                <div class="half-circle"></div>
+            </div>
+            <div id="cat-2" class="cat">
+                <h4 class="fw-bolder" style="color: #FE7831;">Football <br> Collection</h4>
                 <p>80 Products</p>
                 <a class="fw-bold" href="#" style="color: #FE7831;">See collection</a>
                 <img src="./Assets/img/Categories/Ball.png" alt="categories">
+                <div class="half-circle"></div>
             </div>
-            <div id="cat-1" class="cat">
-                <h4 class="fw-bolder" style="color: #FF3C78;">Volleyball Collection</h4>
+            <div id="cat-3" class="cat">
+                <h4 class="fw-bolder" style="color: #FF3C78;">Volleyball <br> Collection</h4>
                 <p>160 Products</p>
                 <a class="fw-bold" href="#" style="color: #FF3C78;">See collection</a>
                 <img src="./Assets/img/Categories/Volly.png" alt="categories">
+                <div class="half-circle"></div>
             </div>
         </div>
-    </section> -->
-
+    </section>
+    <hr class="container">
     <!-- footer start here  -->
     <footer id="footer" class="container">
         <div id="box1">
@@ -268,5 +270,21 @@
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
 <script src="./Assets/js/app.js"></script>
+<script>
+    // let slideIndex = 0;
+    // showSlides();
+
+    // function showSlides() {
+    //     let i;
+    //     let slides = document.getElementsByClassName("mySlides");
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none";
+    //     }
+    //     slideIndex++;
+    //     if (slideIndex > slides.length) { slideIndex = 1 }
+    //     slides[slideIndex - 1].style.display = "block";
+    //     setTimeout(showSlides, 5000); // Change image every 2 seconds
+    // }
+</script>
 
 </html>
