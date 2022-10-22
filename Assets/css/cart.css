@@ -1,0 +1,19 @@
+#cart-container{
+    margin: 2rem auto;
+}
+
+.cart-body ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+    margin: 40px 0px;
+    background-color: #ff3c78e0;
+    padding: 10px 20px;
+    border-radius: 29px;
+    color: white;
+}
+.cart-body ul li{
+    font-weight: 700;
+}

@@ -21,7 +21,7 @@ function topFunction() {
 
 let topProducts = document.getElementById("topProducts");
 function showTopShoes(startIndex, endIndex) {
-	fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/js/json/topProducts.json')
+	fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/json/topProducts.json')
 		.then(response => response.json())
 		.then(data => {
 			let shoes = data.shoes;
@@ -59,6 +59,7 @@ function addProduct(id) {
 	count++;
 	cartCount.innerHTML = count;
 	console.log(id);
+	setCartItems(count)
 }
 
 function displayNewShoes() {
@@ -77,3 +78,6 @@ function displayNewShoes() {
 
 
 
+function setCartItems(cartNumbers) {
+	sessionStorage.setItem('cartNumbers', cartNumbers);
+}
