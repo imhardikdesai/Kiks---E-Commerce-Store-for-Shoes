@@ -30,7 +30,7 @@ function showTopShoes(startIndex, endIndex) {
 			let shoes = data.shoes;
 			console.log(shoes);
 			let str = "";
-			for (startIndex; startIndex < endIndex; startIndex++) {
+			for (startIndex; startIndex <endIndex; startIndex++) {
 				str += `
 			<div class="p-body">
 			<div class="circle" style="background: linear-gradient(239deg, ${shoes[startIndex].bgGradient[0]} 0%, ${shoes[startIndex].bgGradient[1]} 100%);"></div>
@@ -53,7 +53,7 @@ function showTopShoes(startIndex, endIndex) {
 		})
 		.catch(err => console.error(err));
 }
-showTopShoes(0, 4);
+showTopShoes(0, 12);
 
 
 let cartCount = document.getElementById("cartCount");
