@@ -52,26 +52,79 @@ function showTopShoes(startIndex, endIndex) {
 		.catch(err => console.error(err));
 }
 showTopShoes(0, 4);
-
+displayCartPage();
 // SHOW NUMBER OF PRODUCT IN CART LOGO 
 
 // let cartCount = document.getElementById("cartCount");
 // let count = 0;	
+
 function addProduct(id, name, price, imgSrc) {
-	// count++;
-	// cartCount.innerHTML = count;
-	var cartProducts = [];
-	cartProducts.push(JSON.parse(localStorage.getItem('cartObject')));
-	localStorage.setItem('session', JSON.stringify(cartProducts))
+	let cartProduct = localStorage.getItem('cartProduct');
+	if (cartProduct == null) {
+		cartArr = [];
+	} else {
+		cartArr = JSON.parse(cartProduct);
+	}
+	let cartObj = {
+		'id': id,
+		'name': name,
+		'price': price,
+		'imgSrc': imgSrc
+	};
+	cartArr.push(cartObj);
+	localStorage.setItem('cartProduct', JSON.stringify(cartArr))
+	// if (cartProducts.length == 0) {
+	// 	cartProducts.push(cartObj);
+	// 	localStorage.setItem('cartProduct', JSON.stringify(cartProducts))
+	// } else {
+	// 	for (let i = 0; i < cartProducts.length; i++) {
+	// 		if (cartProducts[i].id == id) {
+	// 			break;
+	// 		} else {
+	// 			// cartProducts.push(cartObj);
+	// 			localStorage.setItem('cartProduct', JSON.stringify(cartProducts))
+	// 		}
+	// 	}
+	// }
+	displayCartPage();
+}
 
-	// let cartObj = {
-	// 	'id': id,
-	// 	'name': name,
-	// 	'price': price,
-	// 	'imgSrc': imgSrc
-	// };
-	// localStorage.setItem('cartObject', JSON.stringify(cartObj));
+// DISPLAY ITEMS IN CART 
+function displayCartPage() {
+	let cartBody = document.getElementById("cartBody");
 
+	let myCart = localStorage.getItem('cartProduct');
+	if (myCart == null) {
+		document.getElementById('emptyCart').style.display = "table-row";
+	} else {
+		myCart = JSON.parse(myCart);
+		console.log(myCart);
+		let str = "";
+		for (let i = 0; i < myCart.length; i++) {
+			str += `
+    <tr>
+    <th class="cart-prod" scope="row">
+        <img src="${myCart[i].imgSrc}" alt="shoes">
+        <div class="cart-text">
+            <h5>${myCart[i].name}</h5>
+            <h6>Price : ${myCart[i].price}</h6>
+            <span>Remove</span>
+        </div>
+    </th>
+    <td>1</td>
+    <td>${myCart[i].price}</td>
+</tr>
+    `;
+		}
+		cartBody.innerHTML = str;
+	}
+}
+
+
+// CLEAR CART 
+function clearCart() {
+	localStorage.clear();
+	displayCartPage();
 }
 
 // MALE AND FEMALE SHOES DISPLAY 
@@ -92,4 +145,5 @@ function displayNewShoes() {
 
 function showCartPage() {
 	document.getElementById('hiddenCartPage').style.display = "none";
+	document.getElementById('cart-container').style.display = "block";
 }

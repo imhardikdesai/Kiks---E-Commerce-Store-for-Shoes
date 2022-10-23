@@ -336,6 +336,10 @@ input:checked+.slider:before {
     height: 322px;
 }
 
+/* #emptyCart{
+    display: none;
+} */
+
 .cat img {
     height: 232px;
     position: relative;

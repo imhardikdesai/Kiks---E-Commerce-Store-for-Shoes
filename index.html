@@ -177,8 +177,8 @@
             </section>
         </div>
 
-        <section id="cart-container" class="container">
-            <div class="cart-head">
+        <section style="display: none;" id="cart-container" class="container">
+            <div class="cart-head mb-5">
                 <h1 class="fw-bolder">Shopping Cart</h1>
             </div>
             <div class="cart-body">
@@ -190,8 +190,13 @@
                             <th style="border-radius: 0px 30px 30px 0px;" scope="col">SubTotal</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="cartBody">
+                        <tr id="emptyCart">
+                            <td colspan="3" class="text-center">
+                                <img style="height: 500px;" src="./Assets/img/empty-cart.png" alt="empty-cart">
+                            </td>
+                        </tr>
+                        <!-- <tr>
                             <th class="cart-prod" scope="row">
                                 <img src="https://user-images.githubusercontent.com/87645745/197327637-25d6d8cb-c1de-4f9d-9a9c-27a8ad7c49f3.png"
                                     alt="cart-product">
@@ -203,11 +208,21 @@
                             </th>
                             <td>1</td>
                             <td>$565.00</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
+                <hr class="container">
+                <div id="checkout">
+                    <button onclick="clearCart()" class="hero-btn">Clear Cart</button>
+                    <div class="d-flex justify-content-around align-items-center">
+                        <h4 class="fw-bolder">Total</h4>
+                        <h4 id="total" class="fw-bolder">$0.00</h4>
+                    </div>
+                    <button id="checkoutBtn" class="hero-btn">Checkout</button>
+                </div>
             </div>
-        
+        </section>
+
 
         <hr class="container">
         <!-- footer start here  -->
