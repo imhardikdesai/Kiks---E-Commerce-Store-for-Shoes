@@ -20,8 +20,9 @@ function topFunction() {
 
 // FETCH PRODUCTS IN JSON 
 
-let topProducts = document.getElementById("topProducts");
+
 function showTopShoes(startIndex, endIndex) {
+	let topProducts = document.getElementById("topProducts");
 	fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/json/topProducts.json')
 		.then(response => response.json())
 		.then(data => {
@@ -52,7 +53,6 @@ function showTopShoes(startIndex, endIndex) {
 		.catch(err => console.error(err));
 }
 showTopShoes(0, 4);
-displayCartPage();
 // SHOW NUMBER OF PRODUCT IN CART LOGO 
 
 // let cartCount = document.getElementById("cartCount");
@@ -86,7 +86,6 @@ function addProduct(id, name, price, imgSrc) {
 	// 		}
 	// 	}
 	// }
-	displayCartPage();
 }
 
 // DISPLAY ITEMS IN CART 
@@ -96,7 +95,10 @@ function displayCartPage() {
 	let myCart = localStorage.getItem('cartProduct');
 	if (myCart == null) {
 		document.getElementById('emptyCart').style.display = "table-row";
+		document.getElementById('clearCartBtn').classList.add("disable");
 	} else {
+		document.getElementById('clearCartBtn').classList.remove("disable");
+		document.getElementById('clearCartBtn').classList.add("hero-btn");
 		myCart = JSON.parse(myCart);
 		console.log(myCart);
 		let str = "";
@@ -124,7 +126,15 @@ function displayCartPage() {
 // CLEAR CART 
 function clearCart() {
 	localStorage.clear();
-	displayCartPage();
+	let totalPrice = document.getElementById("totalPrice");
+	let cartBody = document.getElementById("cartBody");
+	cartBody.innerHTML = `<tr id="emptyCart">
+	<td colspan="3" class="text-center">
+	<img style="height: 500px;" src="./Assets/img/empty-cart.png" alt="empty-cart">
+	</td>
+	</tr>`;
+	document.getElementById('clearCartBtn').classList.add("disable");
+	totalPrice.innerText = "$0";
 }
 
 // MALE AND FEMALE SHOES DISPLAY 
@@ -146,4 +156,23 @@ function displayNewShoes() {
 function showCartPage() {
 	document.getElementById('hiddenCartPage').style.display = "none";
 	document.getElementById('cart-container').style.display = "block";
+	displayCartPage();
+	showTotalPrice();
+}
+
+// SHOW TOTAL PRICE OF CART 
+function showTotalPrice() {
+	let totalPrice = document.getElementById("totalPrice");
+	let myCart = localStorage.getItem('cartProduct');
+	if (myCart == null) {
+		totalPrice.innerText = "$0";
+	} else {
+		myCart = JSON.parse(myCart);
+		let sum = 0;
+		for (let i = 0; i < myCart.length; i++) {
+			sum += parseFloat((myCart[i].price).substring(1, myCart[i].price.length));
+
+		}
+		totalPrice.innerText = "$" + sum;
+	}
 }

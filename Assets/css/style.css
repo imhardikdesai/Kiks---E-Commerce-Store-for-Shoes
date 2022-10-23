@@ -306,13 +306,16 @@ input:checked+.slider:before {
     left: 170px;
     bottom: 370px;
 }
-#cat-1 .half-circle{
+
+#cat-1 .half-circle {
     background: linear-gradient(270deg, #FE7831 0%, #FFDEBE 100%);
 }
-#cat-2 .half-circle{
+
+#cat-2 .half-circle {
     background: linear-gradient(97.49deg, #8AA8F8 -0.43%, #315BFF 144.53%);
 }
-#cat-3 .half-circle{
+
+#cat-3 .half-circle {
     background: linear-gradient(270deg, #02BE83 0%, #B3F6DC 100%);
 }
 
@@ -462,4 +465,18 @@ footer {
 
 #myBtn:hover {
     background-color: #FF3C78;
+}
+
+/* DISABLED BUTTON CODE HERE  */
+.disable {
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+.disable:hover {
+    cursor: default;
+    background-color: gray;
+    color: white;
+    border: none;
 }

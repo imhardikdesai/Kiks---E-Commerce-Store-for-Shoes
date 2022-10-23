@@ -67,7 +67,8 @@
                 <a class="list" target="_self" href="#">
                     <li onclick="showCartPage()"><span class="material-symbols-outlined">shopping_bag<span
                                 id="cartCount" class="badge rounded-pill badge-notification bg-danger"></span>
-                        </span></li>
+                        </span>
+                    </li>
                     <!-- <span class="underLine"></span> -->
                 </a>
             </ul>
@@ -213,12 +214,11 @@
                 </table>
                 <hr class="container">
                 <div id="checkout">
-                    <button onclick="clearCart()" class="hero-btn">Clear Cart</button>
-                    <div class="d-flex justify-content-around align-items-center">
+                    <button id="clearCartBtn" onclick="clearCart()" class="hero-btn">Clear Cart</button>
+                    <div class="d-flex justify-content-between align-items-center m-5">
                         <h4 class="fw-bolder">Total</h4>
-                        <h4 id="total" class="fw-bolder">$0.00</h4>
+                        <h4 id="totalPrice" class="fw-bolder">$0.00</h4>
                     </div>
-                    <button id="checkoutBtn" class="hero-btn">Checkout</button>
                 </div>
             </div>
         </section>
