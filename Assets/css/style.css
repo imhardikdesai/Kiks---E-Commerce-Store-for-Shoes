@@ -122,6 +122,12 @@ nav ul {
     color: #FE7831;
 }
 
+.f-product-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
 .f-product-head h1 {
     font-size: 2.6rem;
 }
@@ -303,7 +309,8 @@ input:checked+.slider:before {
     border-bottom-right-radius: 510px;
     transform: rotate(34deg);
     position: relative;
-    left: 170px;
+    /* left: 170px; */
+    left: 65%;
     bottom: 370px;
 }
 
@@ -342,7 +349,8 @@ input:checked+.slider:before {
 .cat img {
     height: 232px;
     position: relative;
-    left: 25px;
+    /* left: 25px; */
+    left: 9%;
 }
 
 /* CART START HERE  */
