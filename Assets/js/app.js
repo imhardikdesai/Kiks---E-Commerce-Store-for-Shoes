@@ -43,7 +43,7 @@ function showTopShoes(startIndex, endIndex) {
                 </div>
 				<div class="top-p-text">
                 	<p class="top-p-name">${shoes[startIndex].name}</p>
-					<p class="top-p-price">${shoes[startIndex].price}<span onClick="addProduct(${shoes[startIndex].id},'${shoes[startIndex].name}','${shoes[startIndex].price}','${shoes[startIndex].imgSrc}');" class="material-symbols-outlined addIcon">add_shopping_cart</span></p>
+					<p class="top-p-price">${shoes[startIndex].price}<span id="liveToastBtn" onClick="addProduct(${shoes[startIndex].id},'${shoes[startIndex].name}','${shoes[startIndex].price}','${shoes[startIndex].imgSrc}');" class="material-symbols-outlined addIcon">add_shopping_cart</span></p>
 				</div>
             </div>
 			`;
@@ -59,7 +59,9 @@ showTopShoes(0, 4);
 // let count = 0;	
 
 function addProduct(id, name, price, imgSrc) {
+	let toastLiveExample = document.getElementById('liveToast')
 	let cartProduct = localStorage.getItem('cartProduct');
+	const toast = new bootstrap.Toast(toastLiveExample)
 	if (cartProduct == null) {
 		cartArr = [];
 	} else {
@@ -73,6 +75,7 @@ function addProduct(id, name, price, imgSrc) {
 	};
 	cartArr.push(cartObj);
 	localStorage.setItem('cartProduct', JSON.stringify(cartArr))
+	toast.show();
 	// if (cartProducts.length == 0) {
 	// 	cartProducts.push(cartObj);
 	// 	localStorage.setItem('cartProduct', JSON.stringify(cartProducts))

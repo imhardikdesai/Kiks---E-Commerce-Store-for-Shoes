@@ -25,8 +25,8 @@
 
     <!-- DARK MODE  -->
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
-    <link rel="stylesheet" href="./Assets/css/dark.css" media="{prefers-color-scheme:dark}">
-    <link rel="stylesheet" href="./Assets/css/style.css" media="{prefers-color-scheme:light}">
+    <!-- <link rel="stylesheet" href="./Assets/css/dark.css" media="{prefers-color-scheme:dark}">
+    <link rel="stylesheet" href="./Assets/css/style.css" media="{prefers-color-scheme:light}"> -->
 
 </head>
 
@@ -35,6 +35,20 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
             expand_less
         </span></button>
+    <!-- Product add Toast  -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img style="height: 20px" src="./Assets/img/favicon.ico" class="rounded me-2" alt="Logo">
+                <strong class="me-auto">Kiks Square</strong>
+                <span style="padding: 4px 8px !important; font-size: 9px;" class="badge text-bg-success">Added</span>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Product added to your cart
+            </div>
+        </div>
+    </div>
     <!-- navbar -->
     <div id="section-1">
         <nav>
@@ -59,8 +73,8 @@
                     <!-- <span class="underLine"></span> -->
                 </a>
                 <a class="list" href="#">
-                    <dark-mode-toggle id="dark-mode-toggle-1" appearance="toggle" dark="Dark" light="Light" mode="light">
-                    </dark-mode-toggle>
+                    <dark-mode-toggle id="dark-mode-toggle-1" appearance="toggle" dark="Dark" light="Light"
+                        mode="light"></dark-mode-toggle>
                 </a>
             </ul>
             <ul class="nav-icons">
