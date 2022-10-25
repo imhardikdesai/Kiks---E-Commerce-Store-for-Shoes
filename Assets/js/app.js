@@ -137,7 +137,7 @@ function clearCart() {
 	</td>
 	</tr>`;
 	document.getElementById('clearCartBtn').classList.add("disable");
-	totalPrice.innerText = "$0";
+	totalPrice.innerText = "$0.00";
 }
 
 // MALE AND FEMALE SHOES DISPLAY 
@@ -178,4 +178,15 @@ function showTotalPrice() {
 		}
 		totalPrice.innerText = "$" + sum;
 	}
+}
+
+
+// SHOW ANIMATION WHEN CHECKOUT 
+function showAnimation() {
+	let lottie = document.getElementById('lottie');
+	lottie.style.display = 'block';
+	setTimeout(() => {
+		lottie.style.display = "none";
+	}, 4000);
+	document.getElementById('checkoutBtn').classList.add('disable')
 }

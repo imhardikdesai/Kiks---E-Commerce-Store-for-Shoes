@@ -92,6 +92,11 @@
         width: 40%;
         margin-bottom: 3rem;
     }
+
+    #cat-para {
+        margin: 0px !important;
+        width: auto !important;
+    }
 }
 
 @media only screen and (max-width: 801px) {
@@ -267,5 +272,16 @@
 
     .circle {
         z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 558px) {
+    .cart-prod {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .cart-prod img {
+        height: 70px !important;
     }
 }
