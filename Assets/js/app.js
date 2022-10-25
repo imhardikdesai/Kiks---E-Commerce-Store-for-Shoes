@@ -132,6 +132,8 @@ function displayCartPage() {
 }
 // REMOVE ITEM FROM CART 
 function removeFromCart(id) {
+	let toastLiveExampleDelete = document.getElementById('liveToastDelete')
+	const toast = new bootstrap.Toast(toastLiveExampleDelete)
 	let myCartStr = localStorage.getItem('cartProduct');
 	myCart = JSON.parse(myCartStr);
 	for (let i = 0; i < myCart.length; i++) {
@@ -142,6 +144,7 @@ function removeFromCart(id) {
 	localStorage.setItem('cartProduct', JSON.stringify(myCart));
 	showTotalPrice();
 	displayCartPage();
+	toast.show();
 	if (myCart.length == 0) {
 		clearCart();
 	}
