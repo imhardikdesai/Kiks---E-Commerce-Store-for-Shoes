@@ -27,7 +27,7 @@ function showTopShoes(startIndex, endIndex) {
 		.then(response => response.json())
 		.then(data => {
 			let shoes = data.shoes;
-			console.log(shoes);
+			// console.log(shoes);
 			let str = "";
 			for (startIndex; startIndex < endIndex; startIndex++) {
 				str += `
@@ -94,34 +94,56 @@ function addProduct(id, name, price, imgSrc) {
 // DISPLAY ITEMS IN CART 
 function displayCartPage() {
 	let cartBody = document.getElementById("cartBody");
-
+	let clearCartBtn = document.getElementById('clearCartBtn');
+	let checkoutBtn = document.getElementById('checkoutBtn');
 	let myCart = localStorage.getItem('cartProduct');
+
 	if (myCart == null) {
 		document.getElementById('emptyCart').style.display = "table-row";
-		document.getElementById('clearCartBtn').classList.add("disable");
+		clearCartBtn.classList.add("disable");
+		checkoutBtn.classList.add("disable");
+		checkoutBtn.style.display = "none";
 	} else {
-		document.getElementById('clearCartBtn').classList.remove("disable");
-		document.getElementById('clearCartBtn').classList.add("hero-btn");
+		clearCartBtn.classList.remove("disable");
+		checkoutBtn.classList.remove("disable");
+		checkoutBtn.style.display = "block";
+		clearCartBtn.classList.add("hero-btn");
 		myCart = JSON.parse(myCart);
-		console.log(myCart);
+		// console.log(myCart);
 		let str = "";
 		for (let i = 0; i < myCart.length; i++) {
 			str += `
-    <tr>
-    <th class="cart-prod" scope="row">
-        <img src="${myCart[i].imgSrc}" alt="shoes">
-        <div class="cart-text">
-            <h5>${myCart[i].name}</h5>
-            <h6>Price : ${myCart[i].price}</h6>
-            <span>Remove</span>
-        </div>
-    </th>
-    <td>1</td>
-    <td>${myCart[i].price}</td>
-</tr>
+					<tr>
+						<th class="cart-prod" scope="row">
+							<img src="${myCart[i].imgSrc}" alt="shoes">
+							<div class="cart-text">
+								<h5>${myCart[i].name}</h5>
+								<h6>Price : ${myCart[i].price}</h6>
+								<span id="${myCart[i].id}" onclick="removeFromCart(this.id)">Remove</span>
+							</div>
+						</th>
+						<td>1</td>
+						<td>${myCart[i].price}</td>
+					</tr>
     `;
 		}
 		cartBody.innerHTML = str;
+	}
+}
+// REMOVE ITEM FROM CART 
+function removeFromCart(id) {
+	let myCartStr = localStorage.getItem('cartProduct');
+	myCart = JSON.parse(myCartStr);
+	for (let i = 0; i < myCart.length; i++) {
+		if (myCart[i].id == id) {
+			myCart.splice(i, 1);
+		}
+	}
+	localStorage.setItem('cartProduct', JSON.stringify(myCart));
+	showTotalPrice();
+	displayCartPage();
+	if (myCart.length == 0) {
+		clearCart();
 	}
 }
 
@@ -138,6 +160,7 @@ function clearCart() {
 	</tr>`;
 	document.getElementById('clearCartBtn').classList.add("disable");
 	totalPrice.innerText = "$0.00";
+	document.getElementById('checkoutBtn').style.display = "none";
 }
 
 // MALE AND FEMALE SHOES DISPLAY 
@@ -189,4 +212,6 @@ function showAnimation() {
 		lottie.style.display = "none";
 	}, 4000);
 	document.getElementById('checkoutBtn').classList.add('disable')
+	clearCart();
+	document.getElementById('checkoutBtn').style.display = "none";
 }
