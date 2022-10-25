@@ -1,3 +1,5 @@
+/* @import "phone.css";  */
+
 #section-1 {
     background-color: black;
     color: white;
@@ -6,9 +8,13 @@
 * {
     color: white;
 }
+
 .list li {
     color: white;
 }
-th,td{
+
+th,
+td {
     border-style: hidden;
 }
+
