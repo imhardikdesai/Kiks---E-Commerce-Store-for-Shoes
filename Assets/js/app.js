@@ -20,7 +20,6 @@ function topFunction() {
 
 // FETCH PRODUCTS IN JSON 
 
-
 function showTopShoes(startIndex, endIndex) {
 	let topProducts = document.getElementById("topProducts");
 	fetch('https://raw.githubusercontent.com/imhardikdesai/Kiks-Square-Store/master/Assets/json/topProducts.json')
@@ -55,27 +54,35 @@ function showTopShoes(startIndex, endIndex) {
 showTopShoes(0, 4);
 // SHOW NUMBER OF PRODUCT IN CART LOGO 
 
-// let cartCount = document.getElementById("cartCount");
-// let count = 0;	
-
 function addProduct(id, name, price, imgSrc) {
+	let quantity = 1;
 	let toastLiveExample = document.getElementById('liveToast')
 	let cartProduct = localStorage.getItem('cartProduct');
-	const toast = new bootstrap.Toast(toastLiveExample)
+	const toast = new bootstrap.Toast(toastLiveExample);
 	if (cartProduct == null) {
 		cartArr = [];
 	} else {
 		cartArr = JSON.parse(cartProduct);
 	}
+
+	for (let i = 0; i < cartArr.length; i++) {
+		if (cartArr[i].id == id) {
+			quantity = (cartArr[i].quantity) + 1;
+			cartArr.splice(i, 1);
+		}
+	}
 	let cartObj = {
 		'id': id,
 		'name': name,
 		'price': price,
-		'imgSrc': imgSrc
+		'imgSrc': imgSrc,
+		'quantity': quantity
 	};
 	cartArr.push(cartObj);
 	localStorage.setItem('cartProduct', JSON.stringify(cartArr))
 	toast.show();
+	let cartCount = document.getElementById("cartCount");
+	cartCount.innerText = cartArr.length;
 	// if (cartProducts.length == 0) {
 	// 	cartProducts.push(cartObj);
 	// 	localStorage.setItem('cartProduct', JSON.stringify(cartProducts))
@@ -122,8 +129,8 @@ function displayCartPage() {
 								<span id="${myCart[i].id}" onclick="removeFromCart(this.id)">Remove</span>
 							</div>
 						</th>
-						<td>1</td>
-						<td>${myCart[i].price}</td>
+						<td>${myCart[i].quantity}</td>
+						<td>$${parseFloat((myCart[i].price).substring(1, myCart[i].price.length)) * (myCart[i].quantity)}</td>
 					</tr>
     `;
 		}
@@ -148,6 +155,7 @@ function removeFromCart(id) {
 	if (myCart.length == 0) {
 		clearCart();
 	}
+	document.getElementById("cartCount").innerText = myCart.length;
 }
 
 
@@ -164,6 +172,7 @@ function clearCart() {
 	document.getElementById('clearCartBtn').classList.add("disable");
 	totalPrice.innerText = "$0.00";
 	document.getElementById('checkoutBtn').style.display = "none";
+	document.getElementById("cartCount").innerText = "0";
 }
 
 // MALE AND FEMALE SHOES DISPLAY 
@@ -199,7 +208,7 @@ function showTotalPrice() {
 		myCart = JSON.parse(myCart);
 		let sum = 0;
 		for (let i = 0; i < myCart.length; i++) {
-			sum += parseFloat((myCart[i].price).substring(1, myCart[i].price.length));
+			sum += parseFloat((myCart[i].price).substring(1, myCart[i].price.length)) * (myCart[i].quantity);
 
 		}
 		totalPrice.innerText = "$" + sum;
