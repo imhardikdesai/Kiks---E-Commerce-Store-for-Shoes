@@ -185,7 +185,7 @@ function displayNewShoes() {
 		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%) ';
 		document.getElementById('bestSellerShoesText').innerText = 'Adidas Falcon Shoes for women - 2021 Edition (PINK)';
 	} else {
-		sellerShoes.setAttribute('src', './Assets/img/best-seller-men.png');
+		sellerShoes.setAttribute('src', 'https://user-images.githubusercontent.com/87645745/198192019-0b3a7bbb-0e68-409d-bb56-71adc9d53fd9.png');
 		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #2226d4 0%, #98cef9 100%) ';
 		document.getElementById('bestSellerShoesText').innerText = 'Adidas Falcon Shoes for men - 2021 Edition (BLUE)';
 	}
