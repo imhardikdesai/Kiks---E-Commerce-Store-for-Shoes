@@ -1,5 +1,7 @@
 // CROLL BUTTON CODE
-mybutton = document.getElementById("myBtn");
+let mybutton = document.getElementById("myBtn");
+
+let clickAudio = document.getElementById("myAudio");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
@@ -16,7 +18,6 @@ let x = document.createElement("LINK");
 x.setAttribute("rel", "stylesheet");
 x.setAttribute("type", "text/css");
 x.setAttribute("href", "./Assets/css/dark.css");
-
 
 let mode = document.getElementById('mode');
 mode.addEventListener('click', () => {
@@ -81,6 +82,7 @@ showTopShoes(0, 4);
 // SHOW NUMBER OF PRODUCT IN CART LOGO 
 
 function addProduct(id, name, price, imgSrc) {
+	clickAudio.play()
 	let quantity = 1;
 	let toastLiveExample = document.getElementById('liveToast')
 	let cartProduct = localStorage.getItem('cartProduct');
@@ -165,6 +167,7 @@ function displayCartPage() {
 }
 // REMOVE ITEM FROM CART 
 function removeFromCart(id) {
+	clickAudio.play()
 	let toastLiveExampleDelete = document.getElementById('liveToastDelete')
 	const toast = new bootstrap.Toast(toastLiveExampleDelete)
 	let myCartStr = localStorage.getItem('cartProduct');
