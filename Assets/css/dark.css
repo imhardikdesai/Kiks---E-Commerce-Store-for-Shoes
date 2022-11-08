@@ -1,20 +1,24 @@
 /* @import "phone.css";  */
 
+:root {
+    --bg-color: black;
+    --text-color: white;
+}
+
 #section-1 {
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 * {
-    color: white;
+    color: var(--text-color);
 }
 
 .list li {
-    color: white;
+    color: var(--text-color);
 }
 
 th,
 td {
     border-style: hidden;
 }
-

@@ -11,7 +11,25 @@ function preLoader() {
 	main.style.display = "block";
 }
 
+//Dark mode toggle
+let x = document.createElement("LINK");
+x.setAttribute("rel", "stylesheet");
+x.setAttribute("type", "text/css");
+x.setAttribute("href", "./Assets/css/dark.css");
 
+
+let mode = document.getElementById('mode');
+mode.addEventListener('click', () => {
+	if (mode.src.match("moon")) {
+		mode.src = "./Assets/img/sunrise.png";
+		document.head.appendChild(x);
+	} else {
+		mode.src = "./Assets/img/moon.png";
+		document.head.removeChild(x);
+	}
+});
+
+//function to go to top
 function scrollFunction() {
 	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
 		mybutton.style.display = "block";
@@ -188,14 +206,17 @@ function clearCart() {
 function displayNewShoes() {
 	let toggleGender = document.getElementById("toggleGender");
 	let sellerShoes = document.getElementById("sellerShoes");
+	let shoesDisplay = document.getElementById("shoesDisplay");
+	let bestSellerShoesText = document.getElementById("bestSellerShoesText");
+
 	if (toggleGender.checked == true) {
-		sellerShoes.setAttribute('src', './Assets/img/best-seller-women.png');
-		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%) ';
-		document.getElementById('bestSellerShoesText').innerText = 'Adidas Falcon Shoes for women - 2021 Edition (PINK)';
+		sellerShoes.src = './Assets/img/best-seller-women.png'
+		shoesDisplay.style.background = 'linear-gradient(270deg, #FF3C78 0%, #FFB2B2 100%) ';
+		bestSellerShoesText.innerText = 'Adidas Falcon Shoes for women - 2021 Edition (PINK)';
 	} else {
-		sellerShoes.setAttribute('src', 'https://user-images.githubusercontent.com/87645745/198192019-0b3a7bbb-0e68-409d-bb56-71adc9d53fd9.png');
-		document.getElementById('shoesDisplay').style.background = 'linear-gradient(270deg, #2226d4 0%, #98cef9 100%) ';
-		document.getElementById('bestSellerShoesText').innerText = 'Adidas Falcon Shoes for men - 2021 Edition (BLUE)';
+		sellerShoes.src = './Assets/img/best-seller-men.png'
+		shoesDisplay.style.background = 'linear-gradient(270deg, #2226d4 0%, #98cef9 100%) ';
+		bestSellerShoesText.innerText = 'Adidas Falcon Shoes for men - 2021 Edition (BLUE)';
 	}
 }
 
